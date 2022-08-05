@@ -4,7 +4,7 @@
 - University Roll No.:1900290000045
 - Branch:CIVIL
 - Section:B
-- Preferred Programming Language: C++/Java/Python
+- Preferred Programming Language: Python
 
 ## Coding Profiles
 - LeetCode: [PIYUSH](https://leetcode.com/user1927hp/)
