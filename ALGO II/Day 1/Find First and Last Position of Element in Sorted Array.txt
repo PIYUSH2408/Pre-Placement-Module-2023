@@ -1,0 +1,32 @@
+class Solution {
+public:
+    int solver(vector<int>& nums, int target,int i,int n){
+        if(n==i){
+            return -1;
+        }
+        if(nums[i]==target){
+            return i;
+        }
+        return solver(nums,target,i+1,n);
+        
+    }
+    int solver1(vector<int>& nums, int target,int i,int n){
+        if(n==i){
+            return -1;
+        }
+        int reminanig_array=solver1(nums,target,i+1,n);
+        if(reminanig_array!=-1){
+            return reminanig_array;
+        }
+        if(nums[i]==target){
+            return i;
+        }
+        return -1;
+    }
+    vector<int> searchRange(vector<int>& nums, int target) {
+        int i=0;
+        int n=nums.size();
+        return {solver(nums,target,i, n),solver1(nums,target,i, n)};
+    }  
+   
+};
