@@ -1,0 +1,33 @@
+class Solution {
+    public boolean increasingTriplet(int[] nums) {
+        int smallest = nums[0];
+        int largest = nums[nums.length-1];
+        int left = 0; int right  = nums.length-1; int temp = Integer.MIN_VALUE;
+        int count = 0;
+        while(left<right)
+        {
+          if(nums[left+1]<smallest) 
+          {
+              left++;
+              smallest = nums[left];
+          }
+          else if(nums[right-1]>largest) 
+          {
+              right--;
+              largest = nums[right];
+          }
+          else
+          {
+              left++;
+              if(nums[left]>smallest && nums[left]>temp)
+              {
+                  count++;
+                  temp = nums[left];
+              }
+          }
+          if(nums[left]>smallest && nums[left]<largest || count ==2)
+              return true;
+      }
+      return false;
+    }
+}
