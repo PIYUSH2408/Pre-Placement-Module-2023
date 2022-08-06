@@ -87,11 +87,11 @@
         <div class="contacts">
           <div class="links">
             <ul>
-              <li class="items"><a href="ashishkumar49251@gmail.com" target="_blank">E-mail</a></li>
-              <li class="items"><a href="https://www.linkedin.com/in/ashish-kumar-5ba4a8195/" target="_blank">Linked in</a></li>
+              <li class="items"><a href="piyush.1923ce1010@gmail.com" target="_blank">E-mail</a></li>
+              <li class="items"><a href="https://www.linkedin.com/in/piyush-40a60a201/" target="_blank">Linked in</a></li>
               <li class="items"><a href="#">Facebook</a></li>
               <li class="items"><a href="#">Twitter</a></li>
-              <li class="items"><a href="https://github.com/whyashishkumar" target="_blank">Github</a></li>
+              <li class="items"><a href="https://github.com/PIYUSH2408" target="_blank">Github</a></li>
             </ul>
           </div>
         </div>
