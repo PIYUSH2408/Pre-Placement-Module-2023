@@ -1,0 +1,21 @@
+class Solution:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+		# We return false if we have checked every node on current path
+        if not root: return False
+		# For every subroot in main tree we check to see if they are the same tree
+        if self.same_tree(root, subRoot): return True
+		# If any subtree matches we return True
+        return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right, subRoot)
+
+    def same_tree(self, p: TreeNode, q: TreeNode)-> bool:
+		# both trees have reeached leaf nodes 
+        if not p and not q: return True
+		# Only one tree has reached a leaf node therefore they can't be the same
+        if not p or not q: return False
+
+		# Compare each node on each side of a given root
+        is_left_same = self.same_tree(p.left, q.left)
+        is_right_same = self.same_tree(p.right, q.right)
+		
+		# If and only if the given root nodes match and their chlideren match are the trees the same
+        return p.val == q.val and is_left_same and is_right_same
