@@ -1,0 +1,18 @@
+ public void sortColors(int[] nums) {
+        var zero = 0;
+        var one = 0;
+        var two=0;
+        for(var i=0;i<nums.length;i++){
+            if(nums[i]==0){
+                zero++;
+            }else if(nums[i]==1){
+                one++;
+            }else{
+                two++;
+            }
+        }
+        Arrays.fill(nums,0,zero,0);
+        Arrays.fill(nums,zero,zero+one,1);
+        Arrays.fill(nums,zero+one,zero+one+two,2);
+
+    }
