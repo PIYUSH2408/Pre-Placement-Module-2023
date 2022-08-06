@@ -1,0 +1,21 @@
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        int size = nums1.size();
+        for(int i = 1; i <= m; ++i){
+            nums1[size - i] = nums1[m - i];
+        }
+        int k = 0, i = size - m, j = 0;
+        for(int k = 0; k < m + n; ++k){
+            int a = i < size ? nums1[i] : INT_MAX;
+            int b = j < n ? nums2[j] : INT_MAX;
+            if(a < b){
+                nums1[k] = a;
+                ++i;
+            }else{
+                nums1[k] = b;
+                ++j;
+            }
+        }
+    }
+};
