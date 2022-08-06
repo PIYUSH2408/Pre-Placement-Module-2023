@@ -1,0 +1,25 @@
+class Solution {
+public:
+    
+    void sol(vector<vector<int>>&ans , vector<int>&res , int i ,int k ,int n){
+       if(k==0){
+           ans.push_back(res);
+           return;
+       }
+        if(i>n){
+            return;
+        }
+        res.push_back(i);
+        sol(ans , res , i+1 , k-1 , n);
+        res.pop_back();
+        sol(ans , res , i+1 , k , n);
+    }
+    
+    vector<vector<int>> combine(int n, int k) {
+     int i=1;
+     vector<vector<int>>ans;
+     vector<int>res;
+     sol(ans , res , i , k , n);
+        return ans;
+    }
+};
