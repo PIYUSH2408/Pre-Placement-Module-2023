@@ -26,7 +26,7 @@
     <section class="section">
         <div class="About">
             <div class="container">
-                <img src="../Images/img.jpeg" alt="profile image" class="profile">
+                <img src="profile">
             </div>
             <div class="Bio">
                 <p>
