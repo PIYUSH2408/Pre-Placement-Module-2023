@@ -1,0 +1,22 @@
+vector<int> helper(int rowIndex,vector<int> &newV,vector<int> &newV1){
+
+   if(rowIndex == 0)
+   {    newV.push_back(1);
+   	return newV;}
+   int i = 1;
+
+newV = helper(rowIndex - 1,newV,newV1);
+newV1 = newV;    
+while (i<rowIndex)
+    {
+  newV1[i] = (newV[i] + newV[i -1]); 
+   	  i++;
+    }
+ newV1.push_back(1);
+   newV = newV1; 
+   return newV; 
+}
+vector<int> getRow(int rowIndex) {
+vector<int> newV;
+vector<int>newV1;
+     return   helper(rowIndex,newV,newV1);
